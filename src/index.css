@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+/* Prevent pull-to-refresh on mobile */
+body {
+  overscroll-behavior-y: none;
+}
+
+/* Enable horizontal touch action for page navigation */
+#root {
+  touch-action: pan-x pinch-zoom;
+}
+
+/* Disable touch action inside swipe areas to prevent conflicts */
+[id^="swipe-area-"] {
+  touch-action: none;
+}
